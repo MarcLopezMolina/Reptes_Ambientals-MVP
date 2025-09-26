@@ -1,0 +1,88 @@
+body {
+  background: #f6fff8; /* Blanco pastel */
+  color: #1b4332;      /* Verde oscuro */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #40916c, #74c69d); /* Tonos verdes pastel */
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: .5rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: #d8f3dc; /* Verde claro pastel */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+h2 {
+  color: #2d6a4f; /* Verde medio */
+  margin-top: 0;
+}
+
+canvas {
+  max-width: 100%;
+  margin-top: 1rem;
+  background: #f6fff8;
+  border-radius: 10px;
+  padding: .5rem;
+}
+
+#map {
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.equipo {
+  text-align: center;
+}
+
+.perfiles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.perfil {
+  background: #b7e4c7;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.perfil h3 {
+  margin: 0 0 .3rem;
+  color: #1b4332;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2d6a4f;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
