@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infoweb · Retos Ambientales</title>
-  <!-- Enlace al archivo CSS externo -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Librerías externas solo para gráficos y mapas -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
 
   <!-- Encabezado -->
@@ -20,35 +20,80 @@
   </header>
 
   <main class="container">
-    <!-- Bloque 1: Cambio Climático -->
+
+    <!-- 1️⃣ Cambio Climático -->
     <section>
       <h2>1. Cambio Climático</h2>
       <p><strong>Ejemplo:</strong> Olas de calor extremas en Europa.</p>
       <canvas id="graficoCO2"></canvas>
+
+      <div class="preguntas">
+        <p><strong>1. Impacto ambiental:</strong> El aumento de las temperaturas ha provocado sequías, incendios
+          forestales y pérdida de biodiversidad. Los glaciares se derriten y el nivel del mar continúa subiendo.</p>
+        <p><strong>2. Impacto en las personas y economía:</strong> Afecta a la salud por golpes de calor y enfermedades
+          respiratorias. También provoca pérdidas agrícolas, daños en infraestructuras y afecta el turismo.</p>
+        <p><strong>3. Medidas:</strong> Reducción de emisiones de CO₂, uso de energías renovables, promoción del
+          transporte sostenible y acuerdos internacionales como el Acuerdo de París.</p>
+        <p><strong>4. Críticas:</strong> Los compromisos son insuficientes y lentos, y muchos países no cumplen sus
+          objetivos climáticos a tiempo.</p>
+      </div>
     </section>
 
-    <!-- Bloque 2: Contaminación del Agua -->
+    <!-- 2️⃣ Contaminación del Agua -->
     <section>
       <h2>2. Contaminación del Agua</h2>
       <p><strong>Ejemplo:</strong> Plásticos acumulados en los océanos.</p>
       <canvas id="graficoPlasticos"></canvas>
+
+      <div class="preguntas">
+        <p><strong>1. Impacto ambiental:</strong> Los residuos plásticos dañan la fauna marina y los ecosistemas
+          acuáticos. Los microplásticos se acumulan en la cadena alimentaria.</p>
+        <p><strong>2. Impacto en las personas y economía:</strong> Perjudica la pesca, el turismo y la salud humana, ya
+          que los microplásticos llegan al agua potable y los alimentos.</p>
+        <p><strong>3. Medidas:</strong> Prohibición de plásticos de un solo uso, mejora del reciclaje, campañas de
+          limpieza marina y concienciación ciudadana.</p>
+        <p><strong>4. Críticas:</strong> Las medidas no son globales ni coordinadas, y la responsabilidad se transfiere
+          al consumidor en lugar de las empresas productoras.</p>
+      </div>
     </section>
 
-    <!-- Bloque 3: Deforestación -->
+    <!-- 3️⃣ Deforestación -->
     <section>
       <h2>3. Deforestación</h2>
       <p><strong>Ejemplo:</strong> Pérdida del Amazonas por ganadería extensiva.</p>
       <div id="map"></div>
+
+      <div class="preguntas">
+        <p><strong>1. Impacto ambiental:</strong> La pérdida de bosques reduce la biodiversidad, aumenta el CO₂ en la
+          atmósfera y altera los ciclos del agua.</p>
+        <p><strong>2. Impacto en las personas y economía:</strong> Afecta a comunidades indígenas, reduce recursos
+          naturales y agrava el cambio climático global.</p>
+        <p><strong>3. Medidas:</strong> Reforestación, creación de reservas naturales y control de la tala ilegal
+          mediante monitoreo satelital.</p>
+        <p><strong>4. Críticas:</strong> La aplicación de las leyes es débil y existen intereses económicos que
+          dificultan su cumplimiento.</p>
+      </div>
     </section>
 
-    <!-- Bloque 4: Contaminación del Aire -->
+    <!-- 4️⃣ Contaminación del Aire -->
     <section>
       <h2>4. Contaminación del Aire</h2>
       <p><strong>Ejemplo:</strong> Niebla tóxica en grandes ciudades.</p>
       <canvas id="graficoAire"></canvas>
+
+      <div class="preguntas">
+        <p><strong>1. Impacto ambiental:</strong> La polución del aire deteriora los ecosistemas, afecta la calidad del
+          suelo y contribuye al cambio climático.</p>
+        <p><strong>2. Impacto en las personas y economía:</strong> Provoca enfermedades respiratorias, cardiovasculares
+          y aumenta los costes sanitarios. Reduce la productividad laboral.</p>
+        <p><strong>3. Medidas:</strong> Fomento del transporte eléctrico, zonas de bajas emisiones, uso de energías
+          limpias y control industrial.</p>
+        <p><strong>4. Críticas:</strong> Las medidas no son homogéneas entre países y no se aplican con suficiente
+          rapidez. Además, no siempre existen alternativas accesibles.</p>
+      </div>
     </section>
 
-    <!-- Bloque del equipo -->
+    <!-- Equipo -->
     <section class="equipo">
       <h2>Team MVP</h2>
       <div class="perfiles">
@@ -68,18 +113,16 @@
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer>
     <p>© 2025 Infoweb · Proyecto del Team MVP</p>
   </footer>
 
-  <!-- Scripts para gráficos y mapas -->
+  <!-- Gráficos y mapa -->
   <script>
-    // Gráfico de CO2 (línea)
     new Chart(document.getElementById('graficoCO2'), {
       type: 'line',
       data: {
-        labels: ['2000','2005','2010','2015','2020'],
+        labels: ['2000', '2005', '2010', '2015', '2020'],
         datasets: [{
           label: 'Emisiones CO₂ (Gt)',
           data: [25, 28, 32, 36, 40],
@@ -90,11 +133,10 @@
       }
     });
 
-    // Gráfico de Plásticos (barras)
     new Chart(document.getElementById('graficoPlasticos'), {
       type: 'bar',
       data: {
-        labels: ['2010','2015','2020','2025'],
+        labels: ['2010', '2015', '2020', '2025'],
         datasets: [{
           label: 'Millones de toneladas de plástico',
           data: [200, 250, 300, 400],
@@ -103,28 +145,27 @@
       }
     });
 
-    // Mapa de Deforestación (Leaflet)
-    var map = L.map('map').setView([ -3.4653, -62.2159 ], 4);
+    var map = L.map('map').setView([-3.4653, -62.2159], 4);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap'
     }).addTo(map);
-    L.circle([ -3.4653, -62.2159 ], {
+    L.circle([-3.4653, -62.2159], {
       color: '#2d6a4f',
       radius: 500000,
       fillOpacity: 0.4
     }).addTo(map).bindPopup('Zona afectada por deforestación en la Amazonía');
 
-    // Gráfico del Aire (circular)
     new Chart(document.getElementById('graficoAire'), {
       type: 'pie',
       data: {
-        labels: ['Industria','Transporte','Hogares','Otros'],
+        labels: ['Industria', 'Transporte', 'Hogares', 'Otros'],
         datasets: [{
           data: [40, 30, 20, 10],
-          backgroundColor: ['#95d5b2','#74c69d','#40916c','#1b4332']
+          backgroundColor: ['#95d5b2', '#74c69d', '#40916c', '#1b4332']
         }]
       }
     });
   </script>
 </body>
+
 </html>
