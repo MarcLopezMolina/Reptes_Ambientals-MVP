@@ -10,14 +10,12 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">← Volver a inicio</a>
-  </nav>
+  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
 
-  <header class="section-hero" style="background-image:url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1200&q=80');">
+  <header class="section-hero" style="background-image:url('img/bosque.jpg');">
     <div class="overlay">
       <h1>Deforestación</h1>
-      <p>La pérdida de bosques pone en riesgo la biodiversidad del planeta.</p>
+      <p>La tala de bosques destruye el equilibrio del planeta.</p>
     </div>
   </header>
 
@@ -25,15 +23,19 @@
     <div id="map"></div>
 
     <div class="info">
-      <p><strong>Impacto ambiental:</strong> Reducción de biodiversidad y aumento de CO₂.</p>
+      <p><strong>Impacto ambiental:</strong> Reducción de biodiversidad y aumento del CO₂.</p>
       <p><strong>Impacto humano:</strong> Afecta comunidades indígenas y recursos naturales.</p>
-      <p><strong>Medidas:</strong> Reforestación y control de tala ilegal.</p>
+      <p><strong>Medidas:</strong> Reforestación, reservas naturales y control de tala ilegal.</p>
+    </div>
+
+    <div class="image-gallery">
+      <img src="img/bosque1.jpg" alt="Selva tropical intacta">
+      <img src="img/bosque2.jpg" alt="Deforestación visible">
+      <img src="img/bosque3.jpg" alt="Reforestación en curso">
     </div>
   </main>
 
-  <footer>
-    <p>© 2025 Infoweb</p>
-  </footer>
+  <footer><p>© 2025 Infoweb</p></footer>
 
   <script>
     var map = L.map('map').setView([-3.4653, -62.2159], 4);

@@ -9,14 +9,12 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="index.html">← Volver a inicio</a>
-  </nav>
+  <nav class="navbar"><a href="index.html">← Volver a inicio</a></nav>
 
-  <header class="section-hero" style="background-image:url('https://images.unsplash.com/photo-1502303756788-9baf0b6ff3da?auto=format&fit=crop&w=1200&q=80');">
+  <header class="section-hero" style="background-image:url('img/clima.jpg');">
     <div class="overlay">
       <h1>Cambio Climático</h1>
-      <p>Olas de calor extremas, deshielos y sequías: nuestro gran reto global.</p>
+      <p>El calentamiento global transforma nuestro planeta.</p>
     </div>
   </header>
 
@@ -24,15 +22,19 @@
     <canvas id="graficoCO2"></canvas>
 
     <div class="info">
-      <p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios y pérdida de biodiversidad.</p>
+      <p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios, sequías y pérdida de biodiversidad.</p>
       <p><strong>Impacto humano:</strong> Problemas de salud, pérdidas agrícolas e infraestructuras dañadas.</p>
       <p><strong>Medidas:</strong> Energías renovables, transporte sostenible y acuerdos internacionales.</p>
     </div>
+
+    <div class="image-gallery">
+      <img src="img/clima1.jpg" alt="Hielo derritiéndose">
+      <img src="img/clima2.jpg" alt="Sequía severa">
+      <img src="img/clima3.jpg" alt="Incendio forestal">
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 Infoweb</p>
-  </footer>
+  <footer><p>© 2025 Infoweb</p></footer>
 
   <script>
     new Chart(document.getElementById('graficoCO2'), {
