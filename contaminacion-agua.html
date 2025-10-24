@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contaminación del Agua · Infoweb</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
+
+  <header class="section-hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
+    <div class="overlay">
+      <h1>Contaminación del Agua</h1>
+      <p>Los plásticos y vertidos amenazan nuestros océanos y ríos.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <canvas id="graficoPlasticos"></canvas>
+
+    <div class="info">
+      <p><strong>Impacto ambiental:</strong> Daño a fauna marina y ecosistemas.</p>
+      <p><strong>Impacto humano:</strong> Afecta la pesca, el turismo y la salud.</p>
+      <p><strong>Medidas:</strong> Prohibir plásticos de un solo uso, fomentar reciclaje y limpiezas marinas.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Infoweb</p>
+  </footer>
+
+  <script>
+    new Chart(document.getElementById('graficoPlasticos'), {
+      type: 'bar',
+      data: {
+        labels: ['2010','2015','2020','2025'],
+        datasets: [{
+          label: 'Millones de toneladas de plástico',
+          data: [200,250,300,400],
+          backgroundColor: '#74c69d'
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

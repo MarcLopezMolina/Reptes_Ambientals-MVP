@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio Climático · Infoweb</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">← Volver a inicio</a>
+  </nav>
+
+  <header class="section-hero" style="background-image:url('https://images.unsplash.com/photo-1502303756788-9baf0b6ff3da?auto=format&fit=crop&w=1200&q=80');">
+    <div class="overlay">
+      <h1>Cambio Climático</h1>
+      <p>Olas de calor extremas, deshielos y sequías: nuestro gran reto global.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <canvas id="graficoCO2"></canvas>
+
+    <div class="info">
+      <p><strong>Impacto ambiental:</strong> Aumento de temperaturas, incendios y pérdida de biodiversidad.</p>
+      <p><strong>Impacto humano:</strong> Problemas de salud, pérdidas agrícolas e infraestructuras dañadas.</p>
+      <p><strong>Medidas:</strong> Energías renovables, transporte sostenible y acuerdos internacionales.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Infoweb</p>
+  </footer>
+
+  <script>
+    new Chart(document.getElementById('graficoCO2'), {
+      type: 'line',
+      data: {
+        labels: ['2000','2005','2010','2015','2020'],
+        datasets: [{
+          label: 'Emisiones de CO₂ (Gt)',
+          data: [25,28,32,36,40],
+          borderColor: '#1b4332',
+          backgroundColor: '#d8f3dc',
+          fill: true
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

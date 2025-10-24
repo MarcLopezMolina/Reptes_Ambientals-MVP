@@ -1,184 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infoweb · Retos Medioambientales</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
-
 <body>
 
-  <!-- 🌱 Barra de navegación -->
-  <nav class="navbar">
-    <h1>Infoweb: Retos Medioambientales</h1>
-    <ul>
-      <li><a href="#cambio-climatico">Cambio Climático</a></li>
-      <li><a href="#agua">Contaminación del Agua</a></li>
-      <li><a href="#deforestacion">Deforestación</a></li>
-      <li><a href="#aire">Contaminación del Aire</a></li>
-    </ul>
-  </nav>
-
-  <!-- Carrusel -->
-  <div class="carousel">
-    <div class="slides">
-      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1502303756788-9baf0b6ff3da?auto=format&fit=crop&w=1200&q=80');">
-        <div class="caption">Cambio Climático</div>
-      </div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1530518119128-ca72724f7bb5?auto=format&fit=crop&w=1200&q=80');">
-        <div class="caption">Contaminación del Agua</div>
-      </div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1200&q=80');">
-        <div class="caption">Deforestación</div>
-      </div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80');">
-        <div class="caption">Contaminación del Aire</div>
-      </div>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Infoweb: Retos Medioambientales</h1>
+      <p>Explora los grandes desafíos que marcarán nuestro futuro</p>
     </div>
-  </div>
+  </header>
 
   <main class="container">
+    <h2 class="center">Selecciona un reto para saber más</h2>
 
-    <!-- 1️⃣ Cambio Climático -->
-    <section id="cambio-climatico">
-      <h2>1. Cambio Climático</h2>
-      <p><strong>Ejemplo:</strong> Olas de calor extremas en Europa.</p>
-      <canvas id="graficoCO2"></canvas>
-      <div class="preguntas">
-        <p><strong>Impacto ambiental:</strong> El aumento de temperaturas causa sequías, incendios y pérdida de biodiversidad. Los glaciares se derriten y el nivel del mar sube.</p>
-        <p><strong>Impacto en las personas y la economía:</strong> Afecta la salud, la agricultura y las infraestructuras.</p>
-        <p><strong>Medidas:</strong> Reducción de emisiones, energías renovables, transporte sostenible y acuerdos internacionales.</p>
-        <p><strong>Críticas:</strong> Los compromisos son insuficientes y lentos.</p>
-      </div>
-    </section>
-
-    <!-- 2️⃣ Contaminación del Agua -->
-    <section id="agua">
-      <h2>2. Contaminación del Agua</h2>
-      <p><strong>Ejemplo:</strong> Plásticos acumulados en los océanos.</p>
-      <canvas id="graficoPlasticos"></canvas>
-      <div class="preguntas">
-        <p><strong>Impacto ambiental:</strong> Los plásticos dañan la fauna marina y los ecosistemas acuáticos.</p>
-        <p><strong>Impacto humano:</strong> Afecta la pesca, el turismo y la salud por microplásticos.</p>
-        <p><strong>Medidas:</strong> Prohibir plásticos de un solo uso, fomentar el reciclaje y campañas de limpieza.</p>
-        <p><strong>Críticas:</strong> Las medidas no son globales ni coordinadas.</p>
-      </div>
-    </section>
-
-    <!-- 3️⃣ Deforestación -->
-    <section id="deforestacion">
-      <h2>3. Deforestación</h2>
-      <p><strong>Ejemplo:</strong> Pérdida del Amazonas por ganadería extensiva.</p>
-      <div id="map"></div>
-      <div class="preguntas">
-        <p><strong>Impacto ambiental:</strong> Disminuye la biodiversidad y aumenta el CO₂.</p>
-        <p><strong>Impacto humano:</strong> Afecta comunidades indígenas y recursos naturales.</p>
-        <p><strong>Medidas:</strong> Reforestación y control de la tala ilegal.</p>
-        <p><strong>Críticas:</strong> Las leyes se aplican débilmente por intereses económicos.</p>
-      </div>
-    </section>
-
-    <!-- 4️⃣ Contaminación del Aire -->
-    <section id="aire">
-      <h2>4. Contaminación del Aire</h2>
-      <p><strong>Ejemplo:</strong> Niebla tóxica en las grandes ciudades.</p>
-      <canvas id="graficoAire"></canvas>
-      <div class="preguntas">
-        <p><strong>Impacto ambiental:</strong> Daña ecosistemas y contribuye al cambio climático.</p>
-        <p><strong>Impacto humano:</strong> Provoca enfermedades respiratorias y cardiovasculares.</p>
-        <p><strong>Medidas:</strong> Transporte eléctrico, energías limpias y control industrial.</p>
-        <p><strong>Críticas:</strong> Falta de aplicación y desigualdad entre países.</p>
-      </div>
-    </section>
-
-    <!-- Equipo -->
-    <section class="equipo">
-      <h2>Equipo MVP</h2>
-      <div class="perfiles">
-        <div class="perfil">
-          <h3>Marc</h3>
-          <p>Investigador Ambiental</p>
+    <div class="card-grid">
+      <a href="cambio-climatico.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1200&q=80');">
+        <div class="card-overlay">
+          <h3>Cambio Climático</h3>
         </div>
-        <div class="perfil">
-          <h3>Victor</h3>
-          <p>Diseñador UI/UX</p>
+      </a>
+
+      <a href="contaminacion-agua.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1502303756788-9baf0b6ff3da?auto=format&fit=crop&w=1200&q=80');">
+        <div class="card-overlay">
+          <h3>Contaminación del Agua</h3>
         </div>
-        <div class="perfil">
-          <h3>Patrick</h3>
-          <p>Desarrollador Frontend</p>
+      </a>
+
+      <a href="deforestacion.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1200&q=80');">
+        <div class="card-overlay">
+          <h3>Deforestación</h3>
         </div>
-      </div>
-    </section>
+      </a>
+
+      <a href="contaminacion-aire.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80');">
+        <div class="card-overlay">
+          <h3>Contaminación del Aire</h3>
+        </div>
+      </a>
+    </div>
   </main>
 
   <footer>
     <p>© 2025 Infoweb · Proyecto del Equipo MVP</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Carrusel automático
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000);
-
-    // Gráficos
-    new Chart(document.getElementById('graficoCO2'), {
-      type: 'line',
-      data: {
-        labels: ['2000', '2005', '2010', '2015', '2020'],
-        datasets: [{
-          label: 'Emisiones de CO₂ (Gt)',
-          data: [25, 28, 32, 36, 40],
-          borderColor: '#1b4332',
-          backgroundColor: '#d8f3dc',
-          fill: true
-        }]
-      }
-    });
-
-    new Chart(document.getElementById('graficoPlasticos'), {
-      type: 'bar',
-      data: {
-        labels: ['2010', '2015', '2020', '2025'],
-        datasets: [{
-          label: 'Millones de toneladas de plástico',
-          data: [200, 250, 300, 400],
-          backgroundColor: '#74c69d'
-        }]
-      }
-    });
-
-    var map = L.map('map').setView([-3.4653, -62.2159], 4);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
-    L.circle([-3.4653, -62.2159], {
-      color: '#2d6a4f',
-      radius: 500000,
-      fillOpacity: 0.4
-    }).addTo(map).bindPopup('Zona afectada por la deforestación en el Amazonas');
-
-    new Chart(document.getElementById('graficoAire'), {
-      type: 'pie',
-      data: {
-        labels: ['Industria', 'Transporte', 'Hogar', 'Otros'],
-        datasets: [{
-          data: [40, 30, 20, 10],
-          backgroundColor: ['#95d5b2', '#74c69d', '#40916c', '#1b4332']
-        }]
-      }
-    });
-  </script>
 </body>
-
 </html>
